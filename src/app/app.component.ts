@@ -1,4 +1,7 @@
+import { MessageType } from './services/admin/alertify.service';
+import { CustomToastrService, ToastrMessageType, ToastrPosition, ToastrOptions } from './services/ui/custom-toastr.service';
 import { Component } from '@angular/core';
+declare var $:any
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'net6Camp';
+  constructor(private toastrService : CustomToastrService){
+    //toastrService.message("SELAM","Test", {messageType : ToastrMessageType.Success ,  position :ToastrPosition.BottomCenter})
+  }
 }
+
+
